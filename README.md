@@ -1,8 +1,16 @@
-# Project Template
+# Mitochondria-specific GSEA Analysis
 
-A template for bioinformatics workflows for the Forsberg lab. Replace this with a short description of whatever analysis is going on here. Created by Akash Pandit.
+Conduct a GSEA of various non-oxphos mito gene sets to lead up to the interesting finds in the oxphos gene set.
 
-- [Project Template](#project-template)
+### Context
+
+Given preset 'sets' of mitochondrially-related genes, look for those sets between Young/Old HSCs that are statistically significant (GSEA).
+
+Given: already tested OxPhos (oxidative phosphorylation) gene set and found some nice statistical significance, what do other gene sets look like? Proposed logic: 'we tested several mitochondrially-associated gene sets and found an interesting pattern among the oxidative phosphorylation set gene set'. The several sets would create Fig. 1A (Akash, this repo) which would lead into oxphos as Fig. 1B (Paloma)
+
+Read about GSEA [here](https://biostatsquid.com/gene-set-enrichment-analysis/).
+
+- [Mitochondria-specific GSEA Analysis](#mitochondria-specific-gsea-analysis)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
 
@@ -20,13 +28,14 @@ Basic BASH shell proficiency is assumed. Mac users, this is built-in to your ter
 
 To clone (download) this repository's contents, navigate to your parent directory of choice and run:
 ```bash
-git clone https://github.com/akash-pandit/bnfo-analysis-template
-cd bnfo-analysis-template 
+git clone https://github.com/akash-pandit/gsea-mito
+cd gsea-mito
 ```
 
 To download all python dependencies and configure your environment, run:
 ```bash
-uv sync  # yeah, its that easy.
+uv sync
+uv pip install -e .
 ```
 
 **For Jupyter users:** Launch jupyter with `uv` to ensure it uses the correct environment and navigate to one of the given URLs:
