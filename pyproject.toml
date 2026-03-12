@@ -17,6 +17,7 @@ dependencies = [
     "scanpy>=1.12",
     "seaborn>=0.13.2",
     "tqdm>=4.67.3",
+    "xlrd>=2.0.2",
 ]
 
 [build-system]
