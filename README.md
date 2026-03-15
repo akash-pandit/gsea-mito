@@ -1,12 +1,12 @@
-# Mitochondria-specific GSEA Analysis
+# Mitochondria-specific GSEA
 
-Conduct a GSEA of various non-oxphos mito gene sets to lead up to the interesting finds in the oxphos gene set.
+A gene-set enrichment analysis (GSEA) of various sets of mitochondria-related nuclear genes leading to support further study into the oxidative phosphorylation (OXPHOS in [MitoCarta 3.0](https://www.broadinstitute.org/mitocarta/mitocarta30-inventory-mammalian-mitochondrial-proteins-and-pathways)) gene set, provided in a documented and reproducible environment.
 
 ### Context
 
-Given preset 'sets' of mitochondrially-related genes, look for those sets between Young/Old HSCs that are statistically significant (GSEA).
+Genes are differentially expressed in cell populations, and a group of these genes that relate to some specific higher-order process/function are called a gene set, with that process/function being the 'pathway' that gene set is associated with. If the majority of the genes in a given pathway are highly enriched in either population, one can say the pathway itself is enriched in said population.
 
-Given: already tested OxPhos (oxidative phosphorylation) gene set and found some nice statistical significance, what do other gene sets look like? Proposed logic: 'we tested several mitochondrially-associated gene sets and found an interesting pattern among the oxidative phosphorylation set gene set'. The several sets would create Fig. 1A (Akash, this repo) which would lead into oxphos as Fig. 1B (Paloma)
+One of this lab's projects involves the discovery and study of a novel megakaryocyte progenitor (MkP, progenitor of platelet-producing MK) 'non-canonical' variant which, interestingly, shows increased function with age as opposed to their root parent ([Poscablo et al. 2021](https://doi.org/10.1016/j.stemcr.2021.04.016)). We hypothesize that mitochondrial function is a significant reason behind this shift, hence this analysis and the greater publication.
 
 Read about GSEA [here](https://biostatsquid.com/gene-set-enrichment-analysis/).
 
@@ -16,9 +16,9 @@ Read about GSEA [here](https://biostatsquid.com/gene-set-enrichment-analysis/).
 
 ## Prerequisites
 
-Basic BASH shell proficiency is assumed. Mac users, this is built-in to your terminal. Windows users, please 
+Basic BASH shell proficiency is assumed.
 
-1. **Terminal Access**: Mac users use "Terminal". Windows users, please [install WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) or another BASH-based terminal emulator of your choice (e.g. Git Bash). 
+1. **Terminal Access**: Mac users use "Terminal". Windows users, please install/use[WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) or another BASH-based terminal emulator of your choice (e.g. Git Bash). 
 
 2. **Git**: used for version control, [install here](https://git-scm.com/install/).
 
@@ -43,7 +43,7 @@ uv pip install -e .
 uv run jupyter lab
 ```
 
-<!-- **For VSCode Users**: VSCode sometimes struggles to recognize a UV environment. To force VSCode's internal jupyter server to recognize a uv python environment, run the following line:
+**For VSCode Users**: VSCode sometimes struggles to recognize a UV environment. To force VSCode's internal jupyter server to recognize a uv python environment, run the following line:
 ```bash
 uv run python -m ipykernel install --user --name internal_env_name --display-name "Env Name"
-``` -->
+```
